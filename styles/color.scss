@@ -1,0 +1,17 @@
+$colors: (
+    "black": #333,
+    "dark": #636d75,
+    "light": #9a9b9f,
+    "grey": #f9f9f9,
+    "white": #fdfdfd,
+    "blue": #016087
+);
+
+@function get-color($color: "black") {
+    @if not map-has-key($colors, $color) {
+        @warn "Incorrect color expected, returning default instead";
+        $color: "black";
+    }
+
+    @return map-get($colors, $color);
+}

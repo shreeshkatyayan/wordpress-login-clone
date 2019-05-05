@@ -1,0 +1,150 @@
+@import "./font.scss";
+@import "./color.scss";
+
+.logo {
+    display: block;
+    margin: 40px auto;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.widthWrapper {
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.linkWrapper a {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    color: get-color("light");
+    font-weight: 500;
+    line-height: 3;
+    padding: 0 24px;
+    width: 100%;
+
+    svg {
+        color: inherit;
+        fill: get-color("light");
+        vertical-align: middle;
+        margin: 0 4px 3px 0;
+    }
+}
+
+.card {
+    position: relative;
+    margin: 0.5rem auto 1rem;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+}
+
+
+.inputContainer {
+    display: block;
+    margin: 16px 0;
+    label {
+        display: block;
+        font-size: get-font("small");
+        line-height: 1.5;
+        color: get-color("light");
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        display: block;
+        width: 100%;
+        background-color: get-color("grey");
+        border: 1px solid rgba(get-color(), 0.3);
+        box-sizing: border-box;
+        font-size: get-font("large");
+        line-height: 1.618;
+        border-radius: 4px;
+        outline-color: get-color("blue");
+        outline-width: 2px;
+        color: get-color("blue");
+    }
+    
+    input[type="checkbox"] {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+
+            &:before {
+                content:'';
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 2px solid rgba(get-color(), 0.3);
+                padding: 7px;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+        }
+
+        &:checked + label {
+            &:before {
+                border-color: get-color("blue");
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 4px;
+                height: 8px;
+                border: solid get-color("blue");
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.button {
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    font-weight: 500;
+    text-decoration: none;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 4px;
+    padding: 7px 14px 9px;
+    appearance: none;
+    color: get-color("white");
+    background-color: get-color("blue");
+}

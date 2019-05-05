@@ -1,0 +1,15 @@
+$font: (
+    "small": 14px,
+    "normal": 16px,
+    "large": 20px,
+    "x_large": 24px
+);
+
+@function get-font($size: "normal") {
+    @if not map-has-key($font, $size) {
+        @warn "Incorrect font-size expected, returning default";
+        $size: "normal";
+    }
+
+    @return map-get($font, $size);
+}

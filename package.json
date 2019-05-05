@@ -1,0 +1,29 @@
+{
+  "name": "wordpress-login-clone",
+  "version": "1.0.0",
+  "description": "Visual clone of wordpress login page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next build && next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreeshkatyayan/wordpress-login-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreeshkatyayan/wordpress-login-clone/issues"
+  },
+  "homepage": "https://github.com/shreeshkatyayan/wordpress-login-clone#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^8.1.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
